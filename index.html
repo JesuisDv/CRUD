@@ -39,59 +39,111 @@
             </nav>
         </header>
         <!-- section 1 Registro-->
-        <section class="max-w mx-auto p-6 bg-white shadow-md rounded-md">
-                <form action="#" method="POST">
-                  <!-- Fila: Categoría y Nombre del Producto -->
+        <section class="max-w mx-auto p-6 bg-white  rounded-md">
+                <form action="#" method="POST" class="w-2/3">
+                  <!-- Fila: Tipos de documento de documento-->
                   <div class="mb-4 flex gap-4">
-                    <!-- Categoría -->
+                    <!-- Tipos de documento -->
                     <div class="flex-1">
-                      <label for="categoria" class="block text-sm font-medium text-gray-700 mb-2">Categoría</label>
-                      <select id="categoria" name="categoria" class="block w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
-                        <option value="electronicos">Electrónicos</option>
-                        <option value="ropa">Ropa</option>
-                        <option value="alimentos">Alimentos</option>
-                        <option value="hogar">Hogar</option>
+                      <label for="documentoTipo" class="block text-sm font-medium text-gray-700 mb-2">Tipo de Documento</label>
+                      <select id="documentoTipo" name="categoria" class="block w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
+                        <option value="electronicos">Cedula</option>
+                        <option value="ropa">Tarjeta de Identidad</option>
+                        <option value="alimentos">Pasaporte</option>
+                        <option value="hogar">Extrangero</option>
                       </select>
                     </div>
               
-                    <!-- Nombre del Producto -->
+                    <!-- Número de documento -->
                     <div class="flex-1">
-                      <label for="producto" class="block text-sm font-medium text-gray-700 mb-2">Nombre del Producto</label>
-                      <input type="text" id="producto" name="producto" class="block w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" placeholder="Ingresa el nombre del producto" required>
+                      <label for="producto" class="block text-sm font-medium text-gray-700 mb-2">Número de Documento</label>
+                      <input type="text" id="producto" name="producto" class="block w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" placeholder="Ingresa su número de documento" required>
                     </div>
                   </div>
               
-                  <!-- Descripción -->
-                  <div class="mb-4">
-                    <label for="descripcion" class="block text-sm font-medium text-gray-700 mb-2">Descripción</label>
-                    <textarea id="descripcion" name="descripcion" rows="4" class="block w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" placeholder="Escribe una descripción del producto"></textarea>
-                  </div>
-              
-                  <!-- Fila: Precio de compra y Precio mínimo -->
+                  <!-- Nombres -->
                   <div class="mb-4 flex gap-4">
-                    <!-- Precio de compra -->
                     <div class="flex-1">
-                      <label for="precio_compra" class="block text-sm font-medium text-gray-700 mb-2">Precio de Compra</label>
-                      <input type="number" id="precio_compra" name="precio_compra" class="block w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" placeholder="Precio de compra" required>
+                      <label for="descripcion" class="block text-sm font-medium text-gray-700 mb-2">Nombres</label>
+                      <input id="descripcion" name="descripcion" rows="1" class="block w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" placeholder="Escribe tu nombre"></input>
+                    </div>
+
+                    <div class="flex-1">
+                      <label for="descripcion" class="block text-sm font-medium text-gray-700 mb-2">Apellidos</label>
+                      <input id="descripcion" name="descripcion" rows="1" class="block w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" placeholder="Escribe tu apellido"></input>
+                    </div>
+
+                  </div>
+              
+                  <!-- Fila: Telofono y Correo -->
+                  <div class="mb-4 flex gap-4">
+                    <!-- Telefono -->
+                    <div class="flex-1">
+                      <label for="precio_compra" class="block text-sm font-medium text-gray-700 mb-2">Telefono</label>
+                      <input type="number" id="precio_compra" name="precio_compra" class="block w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" placeholder="Escribe tu número de telefono" required>
                     </div>
               
-                    <!-- Precio mínimo -->
+                    <!-- Correo-->
                     <div class="flex-1">
-                      <label for="precio_minimo" class="block text-sm font-medium text-gray-700 mb-2">Precio Mínimo</label>
-                      <input type="number" id="precio_minimo" name="precio_minimo" class="block w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" placeholder="Precio mínimo" required>
+                      <label for="precio_minimo" class="block text-sm font-medium text-gray-700 mb-2">Correo</label>
+                      <input type="number" id="precio_minimo" name="precio_minimo" class="block w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" placeholder="Escribe tu correo electronico" required>
                     </div>
                   </div>
               
                   <!-- Botón de Enviar -->
-                  <div>
-                    <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600 focus:ring-4 focus:ring-blue-500">
+                  <div class="flex gap-4">
+                    <button type="submit" class="w-1/6 bg-green-500 text-white py-2 rounded-md hover:bg-green-600 focus:ring-4 focus:ring-green-500">
                       Enviar
+                    </button>
+                    <!-- Boton de Cancelar -->
+                    <button type="reset" class="w-1/6 bg-red-500 text-white py-2 rounded-md hover:bg-red-600 focus:ring-4 focus:ring-red-500">
+                      Cancelar
                     </button>
                   </div>
                 </form>
               </div>
               
         </section>
+
+        <!-- Section Listado de Productos -->
+         <section class="flex flex-col gap-4 p-6 bg-white  rounded-md">
+          <label for="buscarProducto" class="text-4xl font-medium">Listado de Productos</label>
+          <div class="flex">
+            <input type="text" name="bProducto" id="buscarProducto" placeholder="Nombre del Producto" class="block w-1/2 px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
+            <button type="submit" class="w-40 bg-gray-400 border rounded-md text-white py-2 hover:bg-gray-600 focus:ring-gray-500"">Buscar</button>
+          </div>
+
+          <table class="min-w-full bg-white border border-gray-300">
+            <thead class="bg-blue-400 text-white">
+              <tr class="">
+                <th class="py-2 px-2 border">ID</th>
+                <th class="py-2 px-4 border">Tipo Documento</th>
+                <th class="py-2 px-4 border">N° Documento</th>
+                <th class="py-2 px-4 border">Nombres</th>
+                <th class="py-2 px-4 border">Apellidos</th>
+                <th class="py-2 px-4 border">Telefono</th>
+                <th class="py-2 px-4 border">Correo</th>
+                <th class="py-2 px-4 border">Acciones</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr class="text-center">
+                <td class="py-4 px-4 border">1</td>
+                <td class="py-4 px-4 border">Cedula</td>
+                <td class="py-4 px-4 border">1004879710</td>
+                <td class="py-4 px-4 border">Jesús</td>
+                <td class="py-4 px-4 border">Franco</td>
+                <td class="py-4 px-4 border">3024733479</td>
+                <td class="py-4 px-4 border">jdfrancov2020@gmail.com</td>
+                <td class="py-4 px-4 border">
+                  <button class="bg-yellow-400 hover:bg-yellow-500 rounded-md text-black py-1 px-2 border">Editar</button>
+                  <button class="bg-red-500 hover:bg-red-600 rounded-md text-white py-1 px-2 ml-2 border">Eliminar</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+         </section>
     </main>
 </body>
 </html>
